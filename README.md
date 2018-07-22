@@ -13,11 +13,11 @@ TINYMCE_DEFAULT_CONFIG = {
 ```
 >其中的参数可以更改<br><br>
 >3. 提示在`tinymce\widgets.py`中`No module named 'django.core.urlresolves'`: 修改为`from django.urls import reverse`, 同时将内容里的 `urlresolves`修改为`reverse`即可<br><br>
-4. 提示在`tinymce\widgets.py`中`cannot import name flatarr'`: 修改为`from django.forms.utils import flatarr`<br><br>
-5. 提示在`tinymce\settings.py`中`baseurl`位置问题: 修改为`from .utils import baseurl`<br><br>
-6. 将`from django.conf.urls.defaults import *` 中的`.default`去掉<br><br>
-7. 提示`name 'patterns' is not defined`：将`patterns('tinymce.views',`去掉，urlpatterns改为数组<br><br>
-8. 提示`view must be a callable or a list/tuple in the case of include()`：在`tinymce\urls.py`中导入`from .views import *`，并将`'textarea-js'`的引号去掉，后面添加`name='textareas-js'`；后面的参数以此类推<br><br>
-9. 提示在`tinymce\views.py`中`No module named 'django.core.urlresolves'`: 修改为`from django.urls import reverse`, 同时将内容里的 `urlresolves`修改为`reverse`<br><br>
-10. 提示在`tinymce\views.py`中`No module named 'simplejson'`: 将`import simplejson`修改为`import json as simplejson`<br><br>
+>4. 提示在`tinymce\widgets.py`中`cannot import name flatarr'`: 修改为`from django.forms.utils import flatarr`<br><br>
+>5. 提示在`tinymce\settings.py`中`baseurl`位置问题: 修改为`from .utils import baseurl`<br><br>
+>6. 将`from django.conf.urls.defaults import *` 中的`.default`去掉<br><br>
+>7. 提示`name 'patterns' is not defined`：将`patterns('tinymce.views',`去掉，urlpatterns改为数组<br><br>
+>8. 提示`view must be a callable or a list/tuple in the case of include()`：在`tinymce\urls.py`中导入`from .views import *`，并将`'textarea-js'`的引号去掉，后面添加`name='textareas-js'`；后面的参数以此类推<br><br>
+>9. 提示在`tinymce\views.py`中`No module named 'django.core.urlresolves'`: 修改为`from django.urls import reverse`, 同时将内容里的 `urlresolves`修改为`reverse`<br><br>
+>10. 提示在`tinymce\views.py`中`No module named 'simplejson'`: 将`import simplejson`修改为`import json as simplejson`<br><br>
 >从端口`(127.0.0.1:8000/admin)`进入即可使用tinymce编辑器
