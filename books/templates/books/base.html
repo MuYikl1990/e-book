@@ -1,0 +1,61 @@
+{# 首页 登录 注册 之父模板 #}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock title %}</title>
+
+    {% block topfiles %}
+    {% endblock topfiles %}
+    </head>
+    <body>
+        <div class="header_con">
+            <div class="header">
+                <div class="welcome fl"> 欢迎来到E-Book !</div>
+                <div class="fr">
+                    {% if request.session.islogin %}
+                        <div class="login_btn fl">
+                            欢迎你: <em>{{request.session.username }}</em>
+                            <span> | </span>
+                            <a href="{% url 'users:login' %}"> 注销 </a>
+                        </div>
+                    {% else %}
+                        <div class="login_btn fl">
+                            <a href="{% url 'users:login' %}"> 登录 </a>
+                            <span> | </span>
+                            <a href="{% url 'users:register' %}"> 注册 </a>
+                        </div>
+                    {% endif %}
+                        <div class="user_link fl">
+                            <span> | </span>
+                            <a href="{% url 'users:user' %}"> 用户中心 </a>
+                            <span> | </span>
+                            <a href="{% url 'cart:show' %}"> 我的购物车 </a>
+                            <span> | </span>
+                            <a href="{% url 'order: place' %}"> 我的订单 </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    {# 网页顶部搜索栏 #}
+        <div class="search_bar clearfix">
+            <a href="{% url 'books:index' %}" class="logo fl"><img src="{% static 'images/logo.png' %}" style="width: 160px; height:53px;" alt="E-Book's Logo"/></a>
+            <div class="search_con fl">
+                <form method="get" action="/search/">
+                    <input type="text" class='input_text fl' name="q" placeholder="搜索商品">
+                    <input type="submit" class="'input_btn fr" name="" value="搜索">
+                </form>
+            </div>
+
+            <div class="guest_cart fr">
+                <a href="{% url 'cart:show' %}" class="cart_name fl"> 我的购物车 </a>
+                <div class="book_count fl" id="show_count">0</div>
+            </div>
+        </div>
+        <div>
+            {% block content %}{% endblock content %}
+        </div>
+    </body>
+</html>

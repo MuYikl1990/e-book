@@ -1,0 +1,18 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block header %}
+    <h2> 登录你的账户 </h2>
+{% endblock header %}
+
+{% block content %}
+    <form method="post" action="{% url 'users:login' %}" class="form">
+        {% csrf_token %}
+
+        {% button %}
+            <button name="submit" class="btn"> 登录 </button>
+        {% endbutton %}
+
+        <input type="hidden" name="next" value="{% url 'books:index' %}"/>
+    </form>
+{% endblock content %}

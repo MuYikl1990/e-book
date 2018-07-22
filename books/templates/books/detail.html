@@ -1,0 +1,22 @@
+{% extends 'books/base.html' %}
+{% load static %}
+{% block title %} E-Book-商品详情 {% endblock title %}
+{% block content %}
+
+{{type.title}}
+
+<h3>{{ books.name }}</h3>
+<p>{{books.description }}</p>
+<div class="price_bar">
+    <span class="show_price"> ￥<em>{{ books.price }}</em></span>
+    <span class="show_unit">单位: {{books.unit}}</span>
+</div>
+
+{% for book in books_list %}
+    <li>
+        <a href="{% url 'books:detail' books_id=book.id %}"><img src="{% static book.image %}"/></a>
+        <h4><a href="{% url 'books:detail' books_id=book.id %}">{{ book.name }}</a></h4>
+        <div class="price">￥{{ book.price }}</div>
+    </li>
+{% endfor %}
+{% endblock content %}
