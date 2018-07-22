@@ -11,8 +11,8 @@ TINYMCE_DEFAULT_CONFIG = {
     'height': 400,
 }
 ```
-其中的参数可以更改<br><br>
-3. 提示在`tinymce\widgets.py`中`No module named 'django.core.urlresolves'`: 修改为`from django.urls import reverse`, 同时将内容里的 `urlresolves`修改为`reverse`即可<br><br>
+>其中的参数可以更改<br><br>
+>3. 提示在`tinymce\widgets.py`中`No module named 'django.core.urlresolves'`: 修改为`from django.urls import reverse`, 同时将内容里的 `urlresolves`修改为`reverse`即可<br><br>
 4.提示在`tinymce\widgets.py`中`cannot import name flatarr'`: 修改为`from django.forms.utils import flatarr`<br><br>
 5.提示在`tinymce\settings.py`中`baseurl`位置问题: 修改为`from .utils import baseurl`<br><br>
 6.将`from django.conf.urls.defaults import *` 中的`.default`去掉<br><br>
