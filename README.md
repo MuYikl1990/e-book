@@ -21,3 +21,4 @@ TINYMCE_DEFAULT_CONFIG = {
 >9. 提示在`tinymce\views.py`中`No module named 'django.core.urlresolves'`: 修改为`from django.urls import reverse`, 同时将内容里的 `urlresolves`修改为`reverse`<br><br>
 >10. 提示在`tinymce\views.py`中`No module named 'simplejson'`: 将`import simplejson`修改为`import json as simplejson`<br><br>
 >11. 从端口`(127.0.0.1:8000/admin)`进入即可使用tinymce编辑器
+>12. 提示`attempted relative import beyond top-level package`: 原因是`cd eboo`导致`from ..books import *`不能生效，所以要在order文件夹里在导入books和users的models文件。
