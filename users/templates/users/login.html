@@ -8,6 +8,7 @@
 {% block content %}
     <form method="post" action="{% url 'users:login' %}" class="form">
         {% csrf_token %}
+        {{ form.as_p }}
 
         {% button %}
             <button name="submit" class="btn"> 登录 </button>

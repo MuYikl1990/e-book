@@ -6,26 +6,23 @@
 {% block content %}
     <div class="navbar_con">
         <div class="navbar">
-            <h1 class="fl"> 全部商品分类 </h1>
-            <ul class="navlist fl">
-                <li><a href=""> 首页 </a></li>
-                <li class="interval"> | </li>
-            </ul>
+            <h1 style="text-align:center"> 全部图书分类 </h1>
         </div>
     </div>
 
     <div class="center_con clearfix">
         <ul class="subnav fl">
-            <li><a href="#model01" class="python">Python</a> </li>
-            <li><a href="#model02" class="javascript">Javascript</a> </li>
-            <li><a href="#model03" class="algorithms">Algorithms</a> </li>
-            <li><a href="#model04" class="machinelearning">Machinelearning</a> </li>
-            <li><a href="#model05" class="operationsystem">Operationsystem</a> </li>
-            <li><a href="#model06" class="database">Database</a> </li>
+            <li style="float:left; margin-left:60px;"><a href=""> 首页 </a></li>
+            <li style="float:left; margin-left:60px;"><a href="#model01" class="python">Python</a> </li>
+            <li style="float:left; margin-left:60px;"><a href="#model02" class="javascript">Javascript</a> </li>
+            <li style="float:left; margin-left:60px;"><a href="#model03" class="algorithms">Algorithms</a> </li>
+            <li style="float:left; margin-left:60px;"><a href="#model04" class="machinelearning">Machinelearning</a> </li>
+            <li style="float:left; margin-left:60px;"><a href="#model05" class="operationsystem">Operationsystem</a> </li>
+            <li style="float:left; margin-left:60px;"><a href="#model06" class="database">Database</a> </li>
         </ul>
-    </div>
+    </div><br/>
 
-    <div class="list_model">
+    <div class="list_model" style="float:left;">
         <div class="list_title clearfix">
             <h3 class="'fl" id="'model01">Python</h3>
             <div class="'subtitle fl">
@@ -38,7 +35,7 @@
         </div>
 
         <div class="book_con clearfix">
-            <div class="book_banner fl"><img src="{% static 'books/images/banner01.jpg' %}"></div>
+            <div class="book_banner fl"><img src="{% static '/books/images/banner01.jpg' %}"></div>
             <ul class="book_list fl">
                 {% for book in python_hot %}
                     <li>
@@ -51,7 +48,7 @@
         </div>
     </div>
 
-    <div class="list_model">
+    <div class="list_model" >
         <div class="list_title clearfix">
             <h3 class="'fl" id="'model02">Javascript</h3>
             <div class="'subtitle fl">
@@ -75,9 +72,9 @@
                 {% endfor %}
             </ul>
         </div>
-     </div>
+     </div><br/>
 
-    <div class="list_model">
+    <div class="list_model" style="float:left;">
         <div class="list_title clearfix">
             <h3 class="'fl" id="'model03"> Algorithms </h3>
             <div class="'subtitle fl">
@@ -127,9 +124,9 @@
                 {% endfor %}
             </ul>
         </div>
-    </div>
+    </div><br/><br/>
 
-    <div class="list_model">
+    <div class="list_model" style="float:left;">
         <div class="list_title clearfix">
             <h3 class="'fl" id="'model05">Operationsystem</h3>
             <div class="'subtitle fl">

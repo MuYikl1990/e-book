@@ -1,0 +1,26 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block content %}
+<div>
+    <h3> 用户中心 </h3>
+    <ul>
+        <li><a href="{% url 'users:user' %}" class="active"> 个人信息 </a></li>
+        <li><a href="{% url 'users:order' %}"> 全部订单 </a></li>
+        <li><a href="{% url 'users:address' %}">收货地址 </a></li>
+    </ul>
+</div>
+
+<div>
+    <h3> 基本信息 </h3>
+    <ul>
+        <li><span> 用户名：</span>{{ request.session.username }}</li>
+        {% if addr %}
+            <li><span> 联系方式：</span>{{ addr.recipient_phone }}</li>
+            <li><span> 联系地址：</span>{{ addr.recipient_addr }}</li>
+        {% else %}
+             <li><span> 联系方式：</span>无</li>
+             <li><span> 联系地址：</span>无</li>
+        {% endif %}
+    </ul>
+</div>
+{% endblock content %}
