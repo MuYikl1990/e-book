@@ -60,15 +60,15 @@ def list(request, type_id, page):
 
     books_list = Books.objects.get_books_by_type(type_id=type_id, sort=sort)
 
-    paginator = Paginator(books_list, 1)
-    num_pages = paginator.num_pages
+    paginator = Paginator(books_list, 1)              # 每页一条信息
+    num_pages = paginator.num_pages                # 可以分成的页数
 
     if page == '' or int(page) > num_pages:
         page = 1
     else:
         page = int(page)
 
-    books_list = paginator.page(page)
+    books_list = paginator.page(page)                # 取第page分页
 
     if num_pages < 5:
         pages = range(1, num_pages+1)

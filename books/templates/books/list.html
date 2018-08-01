@@ -3,7 +3,7 @@
 {% block title %} E-Book-商品列表 {% endblock title %}
 {% block content %}
 <div class="">
-    <a href="#">全部分类 </a>
+    <a href="{% url 'books:index' %}">全部分类 </a>
     <span> > </span>
     <a href="#">{{ type_title }}</a>
 </div>

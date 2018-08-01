@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'users',
     'books',
     'tinymce',  #富文本编辑器
+    'order',
 ]
 
 MIDDLEWARE = [
@@ -125,8 +126,12 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 LOGIN_URL = '/users/login/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 TINYMCE_DEFAULT_CONFIG = {
     'theme': 'advanced',
