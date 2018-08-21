@@ -10,9 +10,7 @@
         {% csrf_token %}
         {{ form.as_p }}
 
-        {% button %}
-            <button name="submit" class="btn"> 登录 </button>
-        {% endbutton %}
+        <button name="submit" class="btn"> 登录 </button>
 
         <input type="hidden" name="next" value="{% url 'books:index' %}"/>
     </form>
