@@ -22,5 +22,5 @@ TINYMCE_DEFAULT_CONFIG = {
 9. 若提示在`tinymce\views.py`中`No module named 'django.core.urlresolves'`: 修改为`from django.urls import reverse`, 同时将内容里的`urlresolves`修改为`reverse`<br><br>
 10. 若提示在`tinymce\views.py`中`No module named 'simplejson'`: 将`import simplejson`修改为`import json as simplejson`<br><br>
 11. 从端口`(127.0.0.1:8000/admin)`进入即可使用tinymce编辑器<br><br>
-12. 若提示`attempted relative import beyond top-level package`: 原因是`cd ebook`后导致`from ..books import *`不能导入模块，所以要在order文件夹里再导入books和users相关的models文件
+12. 若提示`attempted relative import beyond top-level package`: 原因是`cd ebook`后导致`from ..books import *`不能导入模块，所以要在order文件夹里再导入books和users相关的models文件<br><br>
 13. 通过Linux平台的nginx部署网站环境，操作流程有相应提示
