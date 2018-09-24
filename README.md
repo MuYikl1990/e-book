@@ -23,4 +23,4 @@ TINYMCE_DEFAULT_CONFIG = {
 10. 若提示在`tinymce\views.py`中`No module named 'simplejson'`: 将`import simplejson`修改为`import json as simplejson`<br><br>
 11. 从端口`(127.0.0.1:8000/admin)`进入即可使用tinymce编辑器<br><br>
 12. 若提示`attempted relative import beyond top-level package`: 原因是`cd ebook`后导致`from ..books import *`不能导入模块，所以要在order文件夹里再导入books和users相关的models文件<br><br>
-13. 在Linux平台上使用 nginx 部署网站服务器，通过域名来访问该e-book store
+13. 在Linux平台上使用 nginx 部署网站服务器，通过域名（Freenom申请）来访问该e-book store
